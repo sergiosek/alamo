@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="214" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Lo-1t-yMY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="214" id="CT7-GC-cqS" customClass="PokemonCell" customModule="PokemonApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="214"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CT7-GC-cqS" id="xpD-s1-UWR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odr-S7-Ber">
+                                                    <rect key="frame" x="165.5" y="166" width="44.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulbasaur-128" translatesAutoresizingMaskIntoConstraints="NO" id="oUv-gT-hbI">
+                                                    <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="b9K-0v-Gl5"/>
+                                                        <constraint firstAttribute="height" constant="128" id="cls-Os-Fg8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="odr-S7-Ber" firstAttribute="top" secondItem="oUv-gT-hbI" secondAttribute="bottom" constant="18" id="0Mc-V4-cW9"/>
+                                                <constraint firstItem="oUv-gT-hbI" firstAttribute="top" secondItem="xpD-s1-UWR" secondAttribute="top" constant="20" id="60d-b1-LgT"/>
+                                                <constraint firstItem="oUv-gT-hbI" firstAttribute="centerX" secondItem="xpD-s1-UWR" secondAttribute="centerX" id="70B-Rz-yyX"/>
+                                                <constraint firstItem="odr-S7-Ber" firstAttribute="centerX" secondItem="xpD-s1-UWR" secondAttribute="centerX" id="gPz-m9-810"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.56856346130000002" green="0.56866437199999997" blue="0.56855708360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="pokemonImage" destination="oUv-gT-hbI" id="XLb-FP-9Zb"/>
+                                            <outlet property="pokemonName" destination="odr-S7-Ber" id="EdS-Zi-tCk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Lo-1t-yMY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ffs-bJ-Vxm"/>
+                            <constraint firstAttribute="trailing" secondItem="6Lo-1t-yMY" secondAttribute="trailing" id="ICK-Hj-uFK"/>
+                            <constraint firstItem="6Lo-1t-yMY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ebH-yB-cxi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Lo-1t-yMY" secondAttribute="bottom" id="hhK-2f-CF4"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="6Lo-1t-yMY" id="ddk-i2-4nA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bulbasaur-128" width="128" height="128"/>
+    </resources>
+</document>
